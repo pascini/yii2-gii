@@ -10,7 +10,6 @@
             "email": "raphaelbsr@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
         "yiisoft/yii2": "~2.0.0",
         "raphaelbsr/yii2-frontend": "1.0.0"
@@ -19,5 +18,8 @@
         "psr-4": {
             "raphaelbsr\\gii\\": ""
         }
-    }
+    },
+    "ignore": [
+        ".github"
+    ]
 }
