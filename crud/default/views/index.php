@@ -12,9 +12,9 @@ $nameAttribute = $generator->getNameAttribute();
 echo "<?php\n";?>
 
 use yii\helpers\Html;
-use <?= $generator->indexWidgetType === 'grid' ? "yii\\grid\\GridView" : "yii\\widgets\\ListView" ?>;
+use <?= $generator->indexWidgetType === 'grid' ? "kartik\\grid\\GridView" : "yii\\widgets\\ListView" ?>;
 <?= $generator->enablePjax ? 'use yii\widgets\Pjax;' : '' ?>
-use yii\bootstrap\Modal;
+use yii\bootstrap4\Modal;
 use raphaelbsr\frontend\assets\FrontendAsset;
 FrontendAsset::register($this);
 
@@ -25,7 +25,7 @@ FrontendAsset::register($this);
 $this->title = <?= $generator->generateString(Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>;
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
+<?= \thtmorais\pace\Pace::widget() ?>
 <?php echo "<?php\n";?>
 Modal::begin([
     'title' => '<h4>Cadastro de <?= StringHelper::basename($generator->modelClass) ?></h4>',
@@ -51,7 +51,7 @@ Modal::end();
     <?= "<?= " ?>GridView::widget([
         'dataProvider' => $dataProvider,
         <?= !empty($generator->searchModelClass) ? "'filterModel' => \$searchModel,\n        'columns' => [\n" : "'columns' => [\n"; ?>
-            ['class' => 'yii\grid\SerialColumn'],
+<!--            ['class' => 'yii\grid\SerialColumn'],-->
 
 <?php
 $count = 0;
@@ -76,6 +76,14 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
 ?>
 
             ['class' => 'raphaelbsr\gii\ActionColumn'],
+        ],
+        'panel' => [
+            'type' => 'primary',
+            'heading' => 'Total de registros',
+        ],
+        'toolbar'=>[
+            '{export}',
+            '{toggleData}'
         ],
     ]); ?>
 <?php else: ?>
