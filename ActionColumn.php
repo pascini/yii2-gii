@@ -1,6 +1,6 @@
 <?php
 
-namespace raphaelbsr\gii;
+namespace pascini\gii;
 
 use Yii;
 

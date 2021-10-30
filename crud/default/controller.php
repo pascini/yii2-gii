@@ -9,6 +9,7 @@ use yii\helpers\StringHelper;
 
 /* @var $this yii\web\View */
 /* @var $generator yii\gii\generators\crud\Generator */
+/* @var $generator yii\gii\generators\crud\Generator */
 
 $controllerClass = StringHelper::basename($generator->controllerClass);
 $modelClass = StringHelper::basename($generator->modelClass);
@@ -39,7 +40,7 @@ use yii\data\ActiveDataProvider;
 use <?= ltrim($generator->baseControllerClass, '\\') ?>;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use raphaelbsr\gii\JsonEncoderHelper;
+use pascini\gii\JsonEncoderHelper;
 
 /**
  * <?= $controllerClass ?> implements the CRUD actions for <?= $modelClass ?> model.
