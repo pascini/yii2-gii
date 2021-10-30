@@ -49,7 +49,7 @@ Modal::end();
 <?= $generator->enablePjax ? "<?php Pjax::begin(['id' => 'pjaxContainer', 'enablePushState' => false]); ?>" : '' ?>
 <?php if ($generator->indexWidgetType === 'grid'): ?>
     <?= "<?= " ?>GridView::widget([
-        'dataProvider' => $dataProvider
+        'dataProvider' => $dataProvider,
         <?= !empty($generator->searchModelClass) ? "'filterModel' => \$searchModel,\n        'columns' => [\n" : "'columns' => [\n"; ?>
 
 <?php
