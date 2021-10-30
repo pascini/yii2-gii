@@ -6,7 +6,7 @@
  */
 
 //namespace yii\gii\generators\crud;
-namespace raphaelbsr\gii;
+namespace pascini\gii;
 
 use Yii;
 use yii\db\ActiveRecord;
@@ -39,6 +39,7 @@ class Generator extends \yii\gii\Generator
     public $indexWidgetType = 'grid';
     public $searchModelClass = '';
     /**
+     * @var boolean whether to wrap the `GridView` or `ListView` widget with the `yii\widgets\Pjax` widget
      * @var boolean whether to wrap the `GridView` or `ListView` widget with the `yii\widgets\Pjax` widget
      * @since 2.0.5
      */

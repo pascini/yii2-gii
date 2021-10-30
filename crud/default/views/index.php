@@ -74,7 +74,7 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
 }
 ?>
 
-            ['class' => 'raphaelbsr\gii\ActionColumn'],
+            ['class' => 'pascini\gii\ActionColumn'],
         ],
         'panel' => [
             'type' => 'primary',
