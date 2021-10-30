@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <?php echo "<?php\n";?>
 Modal::begin([
-    'header' => '<h4>Cadastro de <?= StringHelper::basename($generator->modelClass) ?></h4>',
+    'title' => '<h4>Cadastro de <?= StringHelper::basename($generator->modelClass) ?></h4>',
     'id' => 'modalDialog',
     'size' => 'modal-lg',
 ]);
