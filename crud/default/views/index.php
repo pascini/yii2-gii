@@ -15,7 +15,7 @@ use yii\helpers\Html;
 use <?= $generator->indexWidgetType === 'grid' ? "kartik\\grid\\GridView" : "yii\\widgets\\ListView" ?>;
 <?= $generator->enablePjax ? 'use yii\widgets\Pjax;' : '' ?>
 use yii\bootstrap4\Modal;
-use raphaelbsr\frontend\assets\FrontendAsset;
+use pascini\frontend\assets\FrontendAsset;
 FrontendAsset::register($this);
 
 /* @var $this yii\web\View */
